@@ -1,0 +1,1 @@
+Generator\CloudModelGenerator.exe --projectid "20630705-3b47-4951-b2fb-6d86b5457c13" --namespace "AmaranthvilleWeb" --outputdir "./" --withtypeprovider --structuredmodel
