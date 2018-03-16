@@ -1,0 +1,40 @@
+﻿@page
+@model DogModel
+@{
+    ViewData["Title"] = "Dog";
+}
+
+<div id="portfolio_tem">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section_header">
+                <h3>@Model.Pes.Jmeno</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7 left_box">
+                <div class="big">
+                    @foreach (var item in Model.Pes.Fotky.OrderBy(fotka => fotka.Description))
+                    {
+                        <img src="@item.Url" class="img-responsive">
+                    }
+                </div>
+                <div class="thumbs">
+                    @foreach (var item in Model.Pes.Fotky.OrderBy(fotka => fotka.Description))
+                    {
+                        <div class="thumb">
+                            <img src="@item.Url" width="80px">
+                            <a href="#" class="mask">
+                                <div class="more">+</div>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="col-sm-5 right_box">
+                @Html.DisplayFor(model => model.Pes.Popis)
+            </div>
+        </div>
+    </div>
+</div>
